@@ -3,7 +3,7 @@
 
 export MODEL=herolte
 export ARCH=arm64
-export BUILD_CROSS_COMPILE=../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.3.0/bin/aarch64-cortex_a53-linux-gnueabi-
+export BUILD_CROSS_COMPILE=/home/king/KERNEL/toolchain/bin/aarch64-cortex_a53-linux-gnueabi-
 export BUILD_JOB_NUMBER=`grep processor /proc/cpuinfo|wc -l`
 
 RDIR=$(pwd)
@@ -17,9 +17,9 @@ PAGE_SIZE=2048
 DTB_PADDING=0
 
 if [ $MODEL = herolte ]; then
-	KERNEL_DEFCONFIG=exynos8890-herolte_defconfig
+	KERNEL_DEFCONFIG=king-herolte_defconfig
 else if [ $MODEL = hero2lte ]; then
-	KERNEL_DEFCONFIG=exynos8890-hero2lte_defconfig
+	KERNEL_DEFCONFIG=king-hero2lte_defconfig
 else
 	echo "Unknown device: $MODEL"
 	exit 1
