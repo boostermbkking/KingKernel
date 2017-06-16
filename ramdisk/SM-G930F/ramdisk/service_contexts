@@ -146,7 +146,7 @@ wifiscanner                               u:object_r:wifiscanner_service:s0
 wifi                                      u:object_r:wifi_service:s0
 window                                    u:object_r:window_service:s0
 *                                         u:object_r:default_android_service:s0
-#line 1 "out/target/product/herolte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+#line 1 "out/target/product/hero2lte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
 #line 1 "vendor/samsung/system/sepolicy/BSP/qcom_bsp/common/service_contexts"
 android.apps.IQfpService                       u:object_r:iqfp_service:s0
@@ -186,7 +186,7 @@ wigig                                          u:object_r:wigig_service:s0
 
 # Regionalization service
 regionalization                                       u:object_r:regionalization_service:s0
-#line 1 "out/target/product/herolte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+#line 1 "out/target/product/hero2lte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
 #line 1 "vendor/samsung/system/sepolicy/BSP/qcom_bsp/msm8996/service_contexts"
 # Copyright (c) 2015, The Linux Foundation. All rights reserved.
@@ -217,7 +217,7 @@ regionalization                                       u:object_r:regionalization
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 android.apps.IQvopService             u:object_r:iqvop_service:s0
-#line 1 "out/target/product/herolte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+#line 1 "out/target/product/hero2lte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
 #line 1 "vendor/samsung/system/sepolicy/BSP/marvell_bsp/service_contexts"
 # for the binder services
@@ -230,7 +230,7 @@ FMRadioService		u:object_r:FMRadiod_service:s0
 #SEC changed: codecIPCservice		u:object_r:system_service:s0
 codecIPCservice		u:object_r:codecIPC_server_service:s0
 
-#line 1 "out/target/product/herolte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+#line 1 "out/target/product/hero2lte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
 #line 1 "vendor/samsung/system/sepolicy/BSP/sprd_bsp/service_contexts"
 atchannel                                 u:object_r:radio_service:s0
@@ -239,7 +239,7 @@ sprdsimphonebook                          u:object_r:radio_service:s0
 sprd_phone                                u:object_r:radio_service:s0
 security                                  u:object_r:system_service:s0
 board_score                               u:object_r:system_service:s0
-#line 1 "out/target/product/herolte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+#line 1 "out/target/product/hero2lte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
 #line 1 "vendor/samsung/system/sepolicy/service_contexts"
 auditlog                                    u:object_r:auditlog_service:s0
@@ -297,6 +297,9 @@ com.samsung.android.jam.IAPAClientOboe      u:object_r:apaservice_service:s0
 com.samsung.android.jam.IAPAService         u:object_r:apaservice_service:s0
 com.samsung.android.jam.IJackService        u:object_r:jackservice_service:s0
 com.samsung.android.pass.IPassService       u:object_r:platform_app_service:s0
+# SEA_site N OS#395 ,board/N_review_request/view/21598999    tigerservice (com.samsung.srk.tigerkeystoreprovider.ITigerService)
+# add TigerService permission requested by  Multimedia TG (th0228.kim)
+com.samsung.srk.tigerkeystoreprovider.ITigerService               u:object_r:tigerservice_service:s0
 com.samsung.ucs.ucsservice                  u:object_r:ucs_service:s0
 com.sc.scservice.ISCServiceFactory          u:object_r:sc_service:s0
 com.sc.scservicedownloadable.ISCServiceFactory u:object_r:sc_service:s0
@@ -324,6 +327,7 @@ dmb.DMBFrmwrks                              u:object_r:dmb_service:s0
 download                                    u:object_r:download_service:s0
 dtv.server                                  u:object_r:dtvserver_service:s0
 dtvbml.server                               u:object_r:dtvserver_service:s0
+dual_app                                    u:object_r:dualapp_service:s0
 dualscreen                                  u:object_r:dualscreen_service:s0
 dualsim_policy                              u:object_r:EDM_Policy_service:s0
 DCM                                         u:object_r:tlc_server_service:s0
@@ -363,6 +367,8 @@ Exynos.IPService                            u:object_r:surfaceflinger_service:s0
 fclicemwserver                              u:object_r:mmb_mw_service:s0
 felica                                      u:object_r:nfc_service:s0
 fingerprint_service                         u:object_r:fingerprint_app_service:s0
+downloadableccm_svc                         u:object_r:downloadable_ccm_service:s0
+pkcs11wrapperccm_svc                        u:object_r:downloadable_ccm_service:s0
 firewall                                    u:object_r:firewall_service:s0
 firewall_policy                             u:object_r:EDM_Policy_service:s0
 front_led                                   u:object_r:front_led_service:s0
@@ -405,6 +411,7 @@ knox_scep_policy                            u:object_r:EDM_Policy_service:s0
 knox_timakeystore_policy                    u:object_r:EDM_Policy_service:s0
 knox_ucsm_policy                            u:object_r:EDM_Policy_service:s0
 knox_vpn_policy                             u:object_r:EDM_Policy_service:s0
+knoxnap                                     u:object_r:EDM_Policy_service:s0
 knoxcustom                                  u:object_r:knoxcustom_service:s0
 ktuca                                       u:object_r:ktuca_service:s0
 layout_inflater                             u:object_r:layout_inflater_service:s0
@@ -419,7 +426,7 @@ magazinecardservice                         u:object_r:magazinecard_service:s0
 mate_service                                u:object_r:mate_service:s0
 mdm.remotedesktop                           u:object_r:remotedesktop_service:s0
 mDNIe                                       u:object_r:mDNIe_service:s0
-media.air                                   u:object_r:airserver_service:s0
+media.air                                   u:object_r:visiond_service:s0
 media.mediacapture                          u:object_r:mediaserver_service:s0
 media.transcoder                            u:object_r:mediaserver_service:s0
 media.wifi_display                          u:object_r:surfaceflinger_service:s0
@@ -530,5 +537,5 @@ directpeninputmanagerservicerestricted[0-9] u:object_r:directpeninputmanager_ser
 directpeninputmanagerservicerestricted10    u:object_r:directpeninputmanager_service:s0
 WlanDutService                              u:object_r:wlandutservice_service:s0
 
-#line 1 "out/target/product/herolte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+#line 1 "out/target/product/hero2lte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 

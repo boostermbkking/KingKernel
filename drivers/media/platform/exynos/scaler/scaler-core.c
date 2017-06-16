@@ -1348,6 +1348,7 @@ static int sc_prepare_2nd_scaling(struct sc_ctx *ctx,
 
 	if (*h_ratio > SCALE_RATIO_CONST(4, 1))
 		crop.width = ((src_width + 7) / 8) * 2;
+
 	if (crop.width < limit->min_w) {
 		if (SCALE_RATIO(limit->min_w, ctx->d_frame.crop.width)
 						> SCALE_RATIO_CONST(4, 1)) {

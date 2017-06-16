@@ -722,6 +722,9 @@ service cs_service /system/bin/cs
     group system
     disabled
 
+on property:vold.decrypt=trigger_restart_framework
+     start cs_service
+
 on property:ro.crypto.default.encrypted=true
     start cs_service
 
@@ -804,6 +807,7 @@ service apexserver /system/bin/apexserver
 	class main
 	user system
 	group system graphics media media_rw
+	disabled
 
 # RTC logging daemon (SEC_PM)
 service rtc_log /system/bin/rtc_log.sh
